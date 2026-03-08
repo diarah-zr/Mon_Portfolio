@@ -119,18 +119,18 @@
       </a>
 
       <!-- Projet 2 -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="project-card">
-        <img src="images/projet2.png" alt="Application Java">
-        <h3>Application Java</h3>
-        <p>Développement d'une petite application Java (gestion de tâches) avec interface graphique Swing.</p>
+      <a href="javaRéseau.html" target="_blank" rel="noopener noreferrer" class="project-card">
+        <img src="images/projet2.png" alt="Gestion des Employés de Ligues (M2L)">
+        <h3>Gestion des Employés de Ligues (M2L)</h3>
+        <p>Application Java multi-utilisateurs avec gestion des droits par rôle pour la Maison des Ligues.</p>
         <span class="btn">Voir le projet</span>
       </a>
 
       <!-- Projet 3 -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="project-card">
-        <img src="images/projet3.png" alt="Base de données SQL">
-        <h3>Base de données SQL</h3>
-        <p>Conception et implémentation d'une base de données avec SQL et UML pour gérer un mini-système de réservation.</p>
+      <a href="webSystem.html" target="_blank" rel="noopener noreferrer" class="project-card">
+        <img src="images/projet3.png" alt="SkyStorm - Application Web Sociale">
+        <h3>SkyStorm - Application Web Sociale</h3>
+        <p>Réplique allégée de Twitter/X développée en PHP/Laravel avec système de posts, likes et suivi d'utilisateurs.</p>
         <span class="btn">Voir le projet</span>
       </a>
 
@@ -174,20 +174,7 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    if(name && email && message) {
-      alert(`Merci ${name}! Votre message a été reçu. Nous vous recontacterons à ${email}`);
-      this.reset();
-    }
-  });
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
