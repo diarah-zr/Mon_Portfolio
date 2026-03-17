@@ -310,50 +310,97 @@ nav a:hover {
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
+  background: linear-gradient(135deg, var(--secondary-bg) 0%, rgba(26, 26, 26, 0.9) 100%);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(237, 175, 184, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+    margin: 0 20px;
+  }
 }
 
 .form-group {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 25px;
+  position: relative;
 }
 
 label {
   margin-bottom: 8px;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--text-light);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+label i {
+  color: var(--accent);
+  font-size: 16px;
 }
 
 input, textarea {
-  padding: 12px;
-  border: 1px solid #333;
-  border-radius: 6px;
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
   font-size: 16px;
   font-family: 'Inter', sans-serif;
-  background-color: var(--secondary-bg);
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--text-light);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-dark);
+  opacity: 0.7;
 }
 
 input:focus, textarea:focus {
   border-color: var(--accent);
   outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(237, 175, 184, 0.3);
+  transform: translateY(-2px);
 }
 
 button.btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
-  padding: 12px;
-  background-color: var(--accent);
+  padding: 15px;
+  background: linear-gradient(135deg, var(--accent) 0%, #f8c8d0 100%);
   color: var(--noir);
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(237, 175, 184, 0.3);
 }
 
 button.btn:hover {
-  background-color: #dacadb;
+  background: linear-gradient(135deg, #dacadb 0%, var(--accent) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(237, 175, 184, 0.4);
+}
+
+button.btn:active {
+  transform: translateY(-1px);
 }
 footer {
   background-color: var(--secondary-bg);
