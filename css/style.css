@@ -18,15 +18,34 @@ body {
   background: var(--primary-bg);
   color: var(--text-light);
   line-height: 1.6;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 header {
   background: var(--secondary-bg);
   color: var(--text-light);
   padding: 15px 30px;
 }
+
 header h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
@@ -34,6 +53,7 @@ nav ul {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 
 nav a {
@@ -45,7 +65,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--rose);
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -169,6 +189,81 @@ nav a:hover {
   max-width: 300px;
   border-radius: 50%;
   border: 5px solid var(--rose);
+}#formation {
+  padding: 80px 20px;
+  background: var(--primary-bg);
+}
+
+#formation h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--text-light);
+}
+
+.formation-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formation-item {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.formation-item h3 {
+  font-size: 24px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.formation-item p {
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+#stages {
+  padding: 80px 20px;
+  background: var(--secondary-bg);
+}
+
+#stages h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--text-light);
+}
+
+.stages-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stage-item {
+  background-color: var(--primary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.stage-item h3 {
+  font-size: 24px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.stage-item p {
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.stage-item .btn {
+  margin-top: 15px;
 }
 #competences {
   padding: 80px 20px;
@@ -296,7 +391,7 @@ nav a:hover {
 
 #contact {
   padding: 80px 20px;
-  background: var(--primary-bg);
+  background: var(--secondary-bg);
 }
 
 #contact h2 {
@@ -402,6 +497,56 @@ button.btn:hover {
 button.btn:active {
   transform: translateY(-1px);
 }
+
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.contact-item {
+  background: linear-gradient(135deg, var(--secondary-bg) 0%, rgba(26, 26, 26, 0.9) 100%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-item h3 i {
+  font-size: 24px;
+}
+
+.contact-item a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
 footer {
   background-color: var(--secondary-bg);
   color: var(--text-light);
