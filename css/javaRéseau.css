@@ -94,6 +94,20 @@ ul li:before {
   transition: all 0.3s ease;
 }
 
+.project-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.project-hero img {
+  width: 100%;
+  max-width: 700px;
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.12);
+}
+
 .gallery img:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);

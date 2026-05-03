@@ -23,43 +23,82 @@
 </header>
        <div class="container">
         <h1>SkyStorm - Réplique allégée de Twitter/X</h1>
- 
-          <h2>Contexte</h2>
-              <p>SkyStorm est une réplique allégée de Twitter/X, développée en PHP avec le framework Laravel 12. L'objectif est d'illustrer un cycle complet de développement logiciel : conception, modélisation, implémentation et déploiement. Le projet a été réalisé en équipe dans un contexte pédagogique à ITIC PARIS.</p>
-           <p><strong>Intitulé de la situation professionnelle :</strong> Développement d'une application web sociale (SkyStorm) en PHP/Laravel 12</p>
+        <div class="project-hero">
+            <img src="asset/Skystorm.png" alt="Création de posts SkyStorm">
+        </div>
+
+        <h2> Contexte du Projet</h2>
+        <p>SkyStorm est une réplique allégée de Twitter/X développée en Laravel 12 dans un contexte pédagogique pour la préparation à l'épreuve E6 du BTS SIO option SLAM. Le projet est construit en direct avec la classe afin d'illustrer un cycle complet de développement : conception, modélisation, implémentation et déploiement.</p>
+        <p><strong>Intitulé de la situation professionnelle :</strong> Développement d'une application web sociale (SkyStorm) en PHP/Laravel 12</p>
         <p><strong>Période de réalisation :</strong> Du 24/10/2025 au 16/04/2026</p>
 
-        <h2>Conditions de réalisation</h2>
-            <p>Il était demandé de concevoir une application web sociale en PHP/Laravel 12, en respectant les bonnes pratiques de développement et les principes de l'architecture MVC. Les résultats attendus incluent :</p>
+        <h2> Objectifs Pédagogiques</h2>
         <ul>
-             <li>Une application fonctionnelle avec inscription/connexion utilisateur</li>
-              <li>Un système de création, modification et suppression de posts</li>
-            <li>Un système de suivi entre utilisateurs et de likes sur les posts</li>
-             <li>Une base de données relationnelle modélisée à partir d'un MCD</li>
+            <li>Architecture MVC : Comprendre l'architecture MVC de Laravel</li>
+            <li>Authentification : Manipuler l'authentification avec Laravel UI (Bootstrap)</li>
+            <li>Modélisation : Concevoir un MCD et le traduire en base de données relationnelle</li>
+            <li>Eloquent ORM : Gérer les relations n-n et 1-n avec Eloquent</li>
+            <li>Fonctionnalités sociales : Implémenter des fonctionnalités sociales (posts, likes, abonnements)</li>
+            <li>Git : Structurer un projet Git professionnel</li>
         </ul>
 
-         <h2>Mon travail</h2>
-         <ul>
-            <li>Conception et modélisation complète de l'application</li>
-            <li>Implémentation du système d'authentification (inscription/connexion)</li>
-            <li>Développement du système CRUD pour les posts</li>
-            <li>Mise en place du système de suivi entre utilisateurs et likes</li>
-            <li>Création et connexion à la base de données relationnelle</li>
-            <li>Réalisation de tests unitaires</li>
-            <li>Production de la documentation technique</li>
-         </ul>
+        <h2> Fonctionnalités Principales</h2>
+        <h3>1. Inscription / Connexion Utilisateur</h3>
+        <p>Système d'authentification complet via Laravel UI avec Bootstrap, permettant aux utilisateurs de créer un compte, se connecter et gérer leur session de manière sécurisée.</p>
 
-          <h2>Captures et Modélisation</h2>
-           <div class="gallery">
-            <img src="asset/mcd_WebSystem.png" alt="MCD - Modèle Conceptuel de Données">
-           </div>
+        <h3>2. Gestion des Posts</h3>
+        <p>Création, modification et suppression de posts par les utilisateurs authentifiés, avec un fil d'actualité simplifié affichant les publications des comptes suivis.</p>
+        <img src="asset/CodeSky.jfif" alt="Création de posts">
 
-          <h2>Liens</h2>
-         <p>
-         <a href="https://github.com/Max13/SkyStorm">Code source GitHub</a> |
-        <a href="[lien-demo]">Démo en ligne</a>
+        <h3>3. Interactions Sociales</h3>
+        <p>Système de suivi entre utilisateurs (follow/unfollow) et système de likes sur les posts, gérés via des relations n-n avec Eloquent ORM.</p>
+
+        <h2> Captures d'Écran</h2>
+        <div class="gallery">
+            <div class="capture-item">
+                <img src="asset/connectionSKY.jfif" alt="Écran de connexion">
+                <p>INTERFACE DE CONNEXION</p>
+            </div>
+            <div class="capture-item">
+                <img src="asset/structureSky.jfif" alt="Structuration du projet">
+                <p>STRUCTURATION DU PROJET</p>
+            </div>
+            <div class="capture-item">
+                <img src="asset/Creation  de poste.png" alt="Création de posts">
+                <p>CRÉATION DE POSTS</p>
+            </div>
+        </div>
+
+        <h2> Modèle Conceptuel de Données (MCD)</h2>
+        <img src="asset/mcd_WebSystem.png" alt="MCD du projet SkyStorm">
+        <h3>Entités Principales :</h3>
+        <ul>
+            <li>USER : Informations des utilisateurs, authentification et profil</li>
+            <li>POST : Contenu publié par les utilisateurs</li>
+        </ul>
+
+        <h2> Stack Technique</h2>
+        <ul>
+            <li><strong>PHP 8.X</strong> : Langage principal du projet</li>
+            <li><strong>Laravel 12</strong> : Framework MVC avec Blade, Eloquent ORM et Laravel UI (Bootstrap)</li>
+            <li><strong>MySQL / MariaDB</strong> : Base de données relationnelle pour la persistance des données</li>
+        </ul>
+
+        <h2> Défis Relevés</h2>
+        <ul>
+            <li>Mise en place de l'architecture MVC avec Laravel 12</li>
+            <li>Implémentation des relations n-n (likes, abonnements) avec Eloquent</li>
+            <li>Gestion de l'authentification et de la sécurité des routes</li>
+            <li>Construction d'un fil d'actualité dynamique basé sur les abonnements</li>
+            <li>Structuration d'un projet Git professionnel tout au long du développement</li>
+        </ul>
+
+        <h2>Liens</h2>
+        <p>
+            <a href="https://github.com/Max13/SkyStorm">Code source GitHub</a> |
+            <a href="[lien-demo]">Démo en ligne</a>
         </p>
-     </div>
+    </div>
 </body>
 
 <footer>

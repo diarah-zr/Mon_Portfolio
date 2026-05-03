@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/javaRéseau.css">
+    <title>Pokémon CLI - Jeu de Combat en Java</title>
+</head>
+<body>
+   <header>
+   <nav>
+   <h1>
+      <a href="index.html">My_Portfolio</a>
+      </h1>
+     <ul>
+     <li><a href="index.html">Accueil</a></li>
+      <li><a href="projects.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+    </ul>
+   </nav>
+</header>
+    <div class="container">
+        <h1>Pokémon CLI - Jeu de Combat en Java</h1>
+        <div class="project-hero">
+            <img src="asset/Pokemontest.jfif" alt="Capture d'écran du jeu Pokémon CLI">
+        </div>
+
+        <h2> Contexte du Projet</h2>
+        <p>Ce projet est un jeu de combat Pokémon entièrement développé en Java et jouable en ligne de commande (CLI). Réalisé dans un contexte pédagogique, il permet d'appliquer concrètement les principes de la programmation orientée objet : modélisation des entités du jeu (Pokémon, types, combats), encapsulation des données, héritage et polymorphisme. Chaque Pokémon possède un nom, un type, des points de vie, une puissance et des points d'attaque. Les combats se déroulent au tour par tour dans le terminal, avec affichage des dégâts et de l'état de vie de chaque combattant.</p>
+
+        <h2> Objectifs Pédagogiques</h2>
+        <ul>
+            <li>POO Java : Modéliser des entités réelles avec des classes, attributs privés et méthodes publiques</li>
+            <li>Encapsulation : Protéger les données avec des getters/setters et des modificateurs d'accès</li>
+            <li>Enum TypePokemon : Utiliser une énumération pour représenter les types (Feu, Eau, Plante…)</li>
+            <li>Logique de combat : Implémenter un système de combat au tour par tour avec calcul des dégâts</li>
+            <li>Packages Java : Organiser le code en packages métier pour une architecture claire</li>
+            <li>Interface CLI : Afficher dynamiquement le déroulement du combat dans le terminal</li>
+        </ul>
+
+        <h2> Fonctionnalités Principales</h2>
+        <h3>1. Modélisation des Pokémon</h3>
+        <p>Chaque Pokémon est représenté par une classe Java avec cinq attributs encapsulés : son nom, son type (enum TypePokemon), ses points de vie (PV), sa puissance et ses points d'attaque (ATK). Les données sont protégées par des getters et setters dédiés.</p>
+
+        <h3>2. Système de Combat au Tour par Tour</h3>
+        <p>La méthode `attaquer(Pokemon cible)` permet à un Pokémon d'infliger des dégâts à sa cible. Les points de vie de la cible sont réduits en fonction des points d'attaque de l'attaquant, et l'état du combat s'affiche en temps réel dans le terminal.</p>
+
+        <h3>3. Gestion de l'État de Vie</h3>
+        <p>La méthode `estEnVie()` vérifie à chaque tour si un Pokémon est encore en capacité de combattre (PV > 0). Le terminal affiche les dégâts subis, les HP restants ou annonce la défaite du Pokémon tombé au combat.</p>
+
+        <h3>4. Types de Pokémon</h3>
+        <p>Les types sont gérés via une énumération Java `TypePokemon`, permettant de catégoriser chaque Pokémon (Feu, Eau, Plante, etc.) et d'ouvrir la voie à des mécaniques de bonus/malus selon les affinités de types.</p>
+
+        <h3>5. Affichage Formaté dans le Terminal</h3>
+        <p>La méthode `toString()` surcharge l'affichage par défaut pour présenter clairement les caractéristiques de chaque Pokémon : nom, type, PV, puissance et ATK, structurés en lignes lisibles dans le terminal.</p>
+
+        <h2> Captures d'Écran</h2>
+        <div class="gallery">
+            <div class="capture-item">
+                <img src="asset/Pokemontest.jfif" alt="Déroulement d'un combat">
+                <p>DÉROULEMENT D'UN COMBAT</p>
+            </div>
+            <div class="capture-item">
+                <img src="asset/Pokemoncode.jfif" alt="Classe Pokemon.java">
+                <p>CLASSE POKEMON.JAVA</p>
+            </div>
+            
+        </div>
+
+        <h2> Architecture de l'Application</h2>
+        <h3>Structure du Projet :</h3>
+        <ul>
+            <li>metier/Pokemon.java : Classe modèle avec attributs, getters/setters, attaquer() et estEnVie()</li>
+            <li>metier/TypePokemon.java : Énumération des types de Pokémon (Feu, Eau, Plante…)</li>
+            <li>metier/Combat.java : Logique de combat au tour par tour entre deux Pokémon</li>
+            <li>Main.java : Point d'entrée, création des Pokémon et lancement du combat CLI</li>
+        </ul>
+
+        <h2> Stack Technique</h2>
+        <ul>
+            <li><strong>Java</strong> : Langage principal utilisé pour la modélisation POO, la logique de combat et l'affichage CLI</li>
+            <li><strong>CLI (Ligne de Commande)</strong> : Interface de jeu entièrement dans le terminal avec affichage dynamique du combat</li>
+            <li><strong>Packages Java</strong> : Organisation du code en package `metier` pour séparer la logique métier du point d'entrée</li>
+        </ul>
+
+        <h2> Défis Relevés</h2>
+        <ul>
+            <li>Modélisation rigoureuse d'une entité Pokémon avec encapsulation complète des données</li>
+            <li>Implémentation d'une méthode `attaquer()` gérant le calcul des dégâts et les affichages terminal</li>
+            <li>Utilisation d'une énumération Java pour représenter les types de Pokémon</li>
+            <li>Surcharge de `toString()` pour un affichage structuré des caractéristiques</li>
+            <li>Organisation du projet en packages respectant les bonnes pratiques Java</li>
+            <li>Conception d'une boucle de combat lisible et interactive dans le terminal</li>
+        </ul>
+
+        <h2>Liens</h2>
+        <p>
+            <a href="https://github.com/[votre-repo]/Pokemon">Code source GitHub</a>
+        </p>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Mon Portfolio - Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
